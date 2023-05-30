@@ -3,9 +3,10 @@ import classes from './Signup.module.css'
 // import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+  const navigate=useNavigate()
     const emailRef=useRef()
     const passwordRef=useRef()
     const confirmPasswordRef=useRef()
@@ -36,6 +37,8 @@ const Signup = () => {
     })
     if(response.ok){
         console.log("account created successfully")
+        navigate('/')
+      
       }else{
         const data=await response.json()
         // console.log(data.error.message)
@@ -59,7 +62,7 @@ const Signup = () => {
   <input type="password" ref={confirmPasswordRef} value={passwordvalue} onChange={handlePasswordChange}/>
 <button className={`${classes.btnSignUp} btn btn-primary`} type='submit' disabled={passwordvalue.length<5}>Sign Up</button>
     </form>
-<Link to='/login'><button className={classes.accountbtn}>Have an account?Login </button></Link>
+<Link to='/'><button className={classes.accountbtn}>Have an account?Login </button></Link>
 </div>
 
   )

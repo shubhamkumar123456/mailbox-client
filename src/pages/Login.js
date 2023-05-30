@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import classes from "./Login.module.css";
 
 const Login = () => {
+  const navigate =useNavigate()
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -34,7 +35,7 @@ const Login = () => {
         // dispatch(authActions.Setlogin());
         // dispatch(authActions.setToken(data.idToken));
         // dispatch(authActions.setUserId(data.localId))
-        // navigate('/expensepage')
+        navigate('/home')
       } else {
         let data = await response.json();
         // console.log(data.error.message)
