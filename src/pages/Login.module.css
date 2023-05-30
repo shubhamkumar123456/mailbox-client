@@ -1,0 +1,54 @@
+.login{
+    /* width: 500px;  */
+    /* margin: auto; */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 300px; 
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid grey;
+}
+.form label {
+    background-color: black;
+    color: grey;
+    border-radius: 20px;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.form input{
+    background-color: black;
+    border: none;
+    width:100%;
+    color: white;
+    
+}
+form input:focus{
+    border: none;
+}
+.heading{
+    text-align: center;
+    margin: 1rem 0;
+}
+.btnSignUp{
+    width: 100%;
+    margin: auto;
+    border-radius: 30px;
+    margin-top:1rem ;
+}
+.accountbtn{
+    margin-top:1rem ;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
