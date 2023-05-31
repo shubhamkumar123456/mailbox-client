@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDMdAC8uScN7lJ97lpqjm7rRRxkNHx-Fwg",
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAxgW1Zv4HtwsuH3UALNiVRKiWw6A-Kkpo",
         {
           method: "POST",
           body: JSON.stringify({
@@ -35,7 +35,7 @@ const Login = () => {
         // dispatch(authActions.Setlogin());
         // dispatch(authActions.setToken(data.idToken));
         // dispatch(authActions.setUserId(data.localId))
-        navigate('/home')
+        navigate('/emailform')
       } else {
         let data = await response.json();
         // console.log(data.error.message)

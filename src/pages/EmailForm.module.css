@@ -1,0 +1,33 @@
+.emailForm{
+width: 100vw;
+/* background-color: aqua; */
+}
+.emailFormTop{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-left: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(98, 44, 44);
+}
+.emailFormTop input{
+    width: 90%;
+    border: none;
+}
+.middle{
+ margin: 0;
+ padding: 0;
+ border: none;
+ border-bottom: 1px solid rgb(98, 44, 44);
+   /* background-color: red; */
+
+}
+.middle input{
+    width: 100%;
+    padding-left: 1rem;
+    border: none;
+}
+.textarea{
+    width: 100%;
+  
+}

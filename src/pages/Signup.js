@@ -25,7 +25,7 @@ const Signup = () => {
       
   try {
     
-   const response= await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDMdAC8uScN7lJ97lpqjm7rRRxkNHx-Fwg',{
+   const response= await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAxgW1Zv4HtwsuH3UALNiVRKiWw6A-Kkpo',{
         method: 'POST',
         body: JSON.stringify({
             email:emailRef.current.value,
