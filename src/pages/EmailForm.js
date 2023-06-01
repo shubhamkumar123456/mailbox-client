@@ -1,9 +1,12 @@
 import React, { useRef } from 'react'
 import classes from './EmailForm.module.css'
 import { Button } from 'react-bootstrap'
+import EmailFormNavbar from '../Components/EmailFormNavbar';
 
 
 const EmailForm = () => {
+
+
     const emailRef=useRef();
     const fromRef=useRef();
     const textareaRef=useRef();
@@ -57,6 +60,7 @@ const EmailForm = () => {
     }
   return (
     <div className={classes.emailForm}>
+        <EmailFormNavbar/>
     <div className={classes.emailFormTop}>
     <label htmlFor="">To</label>
       <input type="text"  placeholder='email' ref={emailRef}/>

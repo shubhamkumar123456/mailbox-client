@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from 'react-redux';
+import store from './store/index';
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -13,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+  <Provider store={store}> <App /></Provider>
   </React.StrictMode>
 );
 

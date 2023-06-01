@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { authActions } from "../store/AuthSlice";
 import classes from "./Login.module.css";
 
 const Login = () => {
   const navigate =useNavigate()
+  const dispatch=useDispatch()
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -27,14 +29,16 @@ const Login = () => {
       if (response.ok) {
         let data = await response.json();
         console.log(data);
-        localStorage.setItem("authToken", data.idToken);
-        localStorage.setItem("userId", data.localId);
-        // dispatch(authActions.login())
-        // dispatch(authActions.userId(data.localId))
-        // dispatch(authActions.token(data.idToken))
-        // dispatch(authActions.Setlogin());
-        // dispatch(authActions.setToken(data.idToken));
-        // dispatch(authActions.setUserId(data.localId))
+        // localStorage.setItem("authToken", data.idToken);
+        // localStorage.setItem("userId", data.localId);
+        // localStorage.setItem("email", data.email);
+        
+        dispatch(authActions.login({
+          token: data.token,
+          email: data.email,
+          userId: data.userId
+        }))
+      
         navigate('/emailform')
       } else {
         let data = await response.json();

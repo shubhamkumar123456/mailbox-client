@@ -1,0 +1,20 @@
+.EmailFormNavbar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    position: relative
+}
+
+.EmailFormNavbar ul li{
+list-style: none;
+
+}
+.EmailFormNavbarSpan{
+    background-color: aqua;
+    padding: 2px;
+    position: absolute;
+    top: -5px;
+    right:-40px;
+    border-radius: 50%;
+    width: 30px;
+    font-size: 15px;
+}
