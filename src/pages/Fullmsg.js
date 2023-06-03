@@ -9,7 +9,7 @@ const Fullmsg = (props) => {
   return (
     <div className={classes.fullMsgPage}>
       <i className='fas fa-close' onClick={handleClose}></i>
-      <h3 className={classes.from}>{props.dataArr.from}</h3> 
+      <h3 className={classes.from}>From: {props.dataArr.from}</h3> 
       <p className={classes.msgBody}>{props.dataArr.body}</p>
     </div>
   )

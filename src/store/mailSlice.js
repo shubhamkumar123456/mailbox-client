@@ -16,6 +16,9 @@ const mailSlice=createSlice({
         mailRead(state,action){
             state.inbox[action.payload.id]={...action.payload.mail}
         },
+        delete(state, action) {
+            delete state.inbox[action.payload];
+          },
       
     }
 });

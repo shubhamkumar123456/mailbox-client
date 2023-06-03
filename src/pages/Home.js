@@ -7,7 +7,7 @@ import Sent from './Sent'
 const Home = () => {
   const [show, setShow] = useState(false);
   const [clickedCompose, setclickedCompose] = useState(false);
-  const [clickedInbox, setclickedInbox] = useState(false);
+  const [clickedInbox, setclickedInbox] = useState(true);
   const [clickedSent, setclickedSent] = useState(false);
 
  const handleMenuClick=(e)=>{
