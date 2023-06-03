@@ -1,4 +1,53 @@
 .inbox{
+  
     display: flex;
     gap: 1rem;
+}
+.inboxContainer{
+    width: 900px;
+    margin-top: 20px;
+    margin-left: 200px;
+    background-color: aqua;
+}
+.inboxContainer h2{
+    text-align: center;
+    text-decoration: underline;
+}
+.from{
+    background-color: pink;
+    padding: 0 1rem;
+    cursor: pointer;
+    /* width: 200px; */
+}
+.msgBody{
+    cursor: pointer;
+    background-color: pink;
+    white-space: nowrap; 
+    width: 50%; 
+    overflow: hidden;
+    text-overflow:  ellipsis; 
+    border: 1px solid #000000;
+    padding: 0 1rem;
+}
+.spanClass{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 10rem;
+}
+.blue{
+    /* background-color:blue;  */
+    margin-top: 5px;
+    color: blue;
+    margin-right: 1rem;
+ 
+     border-radius: 50%; 
+}
+.white{
+    /* background-color:blue;  */
+    margin-top: 5px;
+    margin-right: 1rem;
+    color: white;
+   
+     border-radius: 50%; 
 }

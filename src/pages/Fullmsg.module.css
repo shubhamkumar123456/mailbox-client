@@ -1,0 +1,8 @@
+.fullMsgPage{
+    width: 600px;
+    background-color: red;
+    padding: 1rem;
+    position: absolute;
+    top:5rem;
+    left: 25rem;
+}

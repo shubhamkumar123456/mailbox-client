@@ -1,0 +1,30 @@
+.sentContainer{
+    width: 900px;
+    margin-top: 20px;
+    margin-left: 200px;
+    background-color: aqua;
+}
+.sentContainer h2{
+    text-align: center;
+    text-decoration: underline;
+}
+.sent{
+  
+    display: flex;
+    gap: 1rem;
+}
+
+.to{
+    background-color: pink;
+    padding: 0 1rem;
+    /* width: 200px; */
+}
+.msgBody{
+    background-color: pink;
+    white-space: nowrap; 
+    width: 50%; 
+    overflow: hidden;
+    text-overflow:  ellipsis; 
+    border: 1px solid #000000;
+    padding: 0 1rem;
+}

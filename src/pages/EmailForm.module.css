@@ -1,5 +1,7 @@
 .emailForm{
-width: 100vw;
+width: 900px;
+margin-top: 20px;
+margin-left: 200px;
 /* background-color: aqua; */
 }
 .emailFormTop{

@@ -13,11 +13,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/signup" element={<Signup />} />
-          <Route path="/emailform" element={<EmailForm />} />
+          {/* <Route path="/emailform" element={<EmailForm />} /> */}
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/inbox" element={<Inbox />} />
-          <Route path="/sent" element={<Sent />} />
+          <Route path="/singleMail" element={<Home />} />
+          {/* <Route path="/inbox" element={<Inbox />} /> */}
+          {/* <Route path="/sent" element={<Sent />} /> */}
         </Routes>
       </BrowserRouter>
     </div>

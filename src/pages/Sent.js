@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch,useSelector } from 'react-redux';
 import { mailActions } from '../store/mailSlice';
-import classes from './Inbox.module.css'
+import classes from './Sent.module.css'
 
 const Sent = () => {
     const dispatch=useDispatch();
@@ -42,13 +42,13 @@ const Sent = () => {
     console.log(arr)
 
   return (
-    <div>
-      <h1>Sent Emails</h1>
+    <div className={classes.sentContainer}>
+      <h2>Sent Emails</h2>
   {arr.map((data)=>{
     return(
-       <div className={classes.inbox} key={data.key}>
-        <p>{data.inbox.to} :</p>
-        <p>{data.inbox.body}</p>
+       <div className={classes.sent} key={data.key}>
+        <p className={classes.to}>{data.inbox.to} :</p>
+        <p className={classes.msgBody}>{data.inbox.body}</p>
        </div>
     )
   })}

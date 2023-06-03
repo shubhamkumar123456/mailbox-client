@@ -39,7 +39,7 @@ const Login = () => {
           userId: data.userId
         }))
       
-        navigate('/emailform')
+        navigate('/home')
       } else {
         let data = await response.json();
         // console.log(data.error.message)

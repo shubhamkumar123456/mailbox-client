@@ -1,0 +1,35 @@
+
+
+
+
+.icon{
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+}
+.sideBar{
+    margin-top: 1rem;
+    /* background-color: rgb(223, 222, 222); */
+    width: 200px;
+   
+}
+
+.sideBar ul{
+    list-style: none;
+    cursor: pointer;  
+}
+.sideBar ul li{
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+.sideBar ul a{
+    text-decoration: underline;
+    color: black;
+}
+.flex{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    /* gap: 2rem; */
+}

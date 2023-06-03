@@ -7,12 +7,16 @@ const mailSlice=createSlice({
         sent:{},
     },
     reducers:{
-        mailSent(state,action){
-            state.sent[action.payload.id]=action.payload.mail
-        },
+        // mailSent(state,action){
+        //     state.sent[action.payload.id]=action.payload.mail
+        // },
         inbox(state,action){
             state.inbox=action.payload
-        }
+        },
+        mailRead(state,action){
+            state.inbox[action.payload.id]={...action.payload.mail}
+        },
+      
     }
 });
 export const mailActions=mailSlice.actions;

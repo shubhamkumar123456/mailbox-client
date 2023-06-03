@@ -2,11 +2,16 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch,useSelector } from 'react-redux';
 import { mailActions } from '../store/mailSlice';
 import classes from './Inbox.module.css'
+import Fullmsg from './Fullmsg';
 
 const Inbox = () => {
     const dispatch=useDispatch();
-    const [emailBox, setemailBox] = useState([]);
+    // const [emailBox, setemailBox] = useState([]);
     // const email='clboy768gmailcom'
+    const [light, setlight] = useState(true);
+    const [viewMail, setviewMail] = useState(false);
+    const [dataArr, setdataArr] = useState();
+    const [clicked, setclicked] = useState(false);
 
     const inbox=useSelector(state=>state.mail.inbox);
     const fullemail=useSelector(state=>state.auth.email);
@@ -41,18 +46,66 @@ const Inbox = () => {
     }
     console.log(arr)
 
+    const handleClick=async(data)=>{
+
+      // console.log(data.inbox.status)
+      const id=data.key
+
+      if(data.inbox.status==='unread'){
+        const response = await fetch(`https://mail-box-71fcb-default-rtdb.firebaseio.com/users/${email}/inbox/${id}.json`, {
+          method:'PATCH',
+          body: JSON.stringify({
+            status:'read'
+          }),
+          headers:{
+            'Content-Type': 'application/json'
+          }
+      
+              }
+              )
+              const data1=await response.json()
+              console.log("data1",data1)
+              dispatch(mailActions.inbox(data1))
+              fetchMails()
+              setlight(false)
+      }else{
+        setlight(true)
+      }
+     
+
+     
+    }
+  
+    const handleMsgClick=(data)=>{
+      // console.log(data.inbox)
+      setclicked(true)
+      setdataArr(data.inbox)
+
+      // setviewMail(!viewMail)
+     
+    }
+
   return (
-    <div>
-      <h1>Inbox Page</h1>
+    <>
+    <div className={classes.inboxContainer}>
+      <h2>Inbox </h2>
+    <div className={classes.spanClass}>  <span>From</span><span>Emails</span></div>
   {arr.map((data)=>{
     return(
        <div className={classes.inbox} key={data.key}>
-        <p>{data.inbox.to} :</p>
-        <p>{data.inbox.body}</p>
+        
+        
+        <p className={classes.from} onClick={()=>{handleClick(data)}}>{data.inbox.status==='unread'?<i className={`fas fa-circle-dot ${classes.blue}`}></i>:<i className={`fas fa-circle-dot ${classes.white}`}></i>}{data.inbox.from} :</p>
+        <p onClick={()=>{handleMsgClick(data)}} className={classes.msgBody}>{data.inbox.body}</p>
+        {/* <p>{data.inbox.status}</p> */}
+       
        </div>
     )
   })}
+
     </div>
+     { clicked && <Fullmsg setclicked={setclicked} viewMail={viewMail} setviewMail={setviewMail} dataArr={dataArr} />}
+     </>
   )
 }
 
