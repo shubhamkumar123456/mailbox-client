@@ -44,7 +44,7 @@ const Inbox = () => {
     // console.log(key,inbox[key])
     arr.push({ key, inbox: inbox[key] });
   }
-  console.log(arr);
+  // console.log(arr);
 
   const handleClick = async (data) => {
     // console.log(data.inbox.status)
@@ -142,6 +142,7 @@ console.log(data1);
           viewMail={viewMail}
           setviewMail={setviewMail}
           dataArr={dataArr}
+          delete={handleDelete}
         />
       )}
     </>

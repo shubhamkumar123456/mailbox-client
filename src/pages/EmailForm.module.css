@@ -16,11 +16,21 @@ margin-left: 200px;
     width: 90%;
     border: none;
 }
+.emailFormTop input:focus{
+    outline: none;
+}
+
+.inputFrom:focus{
+    outline: none;
+border: none !important;
+}
 .middle{
- margin: 0;
- padding: 0;
- border: none;
- border-bottom: 1px solid rgb(98, 44, 44);
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-left: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(98, 44, 44);
    /* background-color: red; */
 
 }
