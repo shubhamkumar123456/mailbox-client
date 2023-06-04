@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import useFetch from "../Components/useFetch";
 import { useDispatch, useSelector } from "react-redux";
 import { mailActions } from "../store/mailSlice";
 import classes from "./Inbox.module.css";
@@ -44,6 +45,7 @@ const Inbox = () => {
   const handleClick = async (data) => {
     // console.log(data.inbox.status)
     const id = data.key;
+
 
     if (data.inbox.status === "unread") {
       const response = await fetch(
