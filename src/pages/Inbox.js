@@ -5,6 +5,7 @@ import { mailActions } from "../store/mailSlice";
 import classes from "./Inbox.module.css";
 import Fullmsg from "./Fullmsg";
 
+
 const Inbox = () => {
   const dispatch = useDispatch();
   // const [emailBox, setemailBox] = useState([]);

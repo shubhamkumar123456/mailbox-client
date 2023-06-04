@@ -3,6 +3,7 @@ import classes from './EmailForm.module.css'
 import { Button } from 'react-bootstrap'
 import { useSelector } from 'react-redux';
 import EmailFormNavbar from '../Components/EmailFormNavbar';
+import EmojiPicker from 'emoji-picker-react';
 
 
 const EmailForm = () => {
@@ -76,11 +77,13 @@ const EmailForm = () => {
             <div className={classes.emailFormTop}>
                 <label htmlFor="" style={{marginRight:"1rem"}}>To: </label>
                 <input type="text" placeholder='email' ref={emailRef} />
+        
             </div>
             <div>
                 <textarea className={classes.textarea} name="" id="" cols="30" rows="10" ref={textareaRef}></textarea>
                 <Button onClick={handleSubmit}>Send</Button>
             </div>
+          
         </div>
     )
 }

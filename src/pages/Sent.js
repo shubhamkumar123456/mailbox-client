@@ -44,12 +44,16 @@ const Sent = () => {
   return (
     <div className={classes.sentContainer}>
       <h2>Sent Emails</h2>
+      <div className={classes.spanBox}>
+        <span>To</span> <span>Email</span>
+      </div>
   {arr.map((data)=>{
     return(
        <div className={classes.sent} key={data.key}>
-        <p className={classes.to}>{data.inbox.to} :</p>
+        <p className={classes.to}>{data.inbox.from} :</p>
         <p className={classes.msgBody}>{data.inbox.body}</p>
        </div>
+      // console.log("data", data)
     )
   })}
     </div>

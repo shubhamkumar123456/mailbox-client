@@ -28,3 +28,10 @@
     border: 1px solid #000000;
     padding: 0 1rem;
 }
+.spanBox{
+    display: flex;
+    gap: 15rem;
+    margin-left: 1rem;
+    font-weight: bolder;
+    margin-top: 1rem;
+}
