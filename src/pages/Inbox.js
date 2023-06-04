@@ -23,19 +23,14 @@ const Inbox = () => {
     );
     const data = await response.json();
     dispatch(mailActions.inbox(data));
-    // // console.log(data)
-    // let arr=[];
-    // for(let key in data) {
-    //     // console.log(key, data[key])
-    //     arr.push(data[key]);
-    // }
-    // setemailBox(arr);
-    // // console.log(arr)
-    // console.log(emailBox)
+  
   };
 
   useEffect(() => {
-    fetchMails();
+    setInterval(() => {
+      fetchMails();
+    }, 2000);
+   
   }, []);
 
   // console.log("inbox", inbox)
